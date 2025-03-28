@@ -17,7 +17,9 @@ def page_dash():
 def page_home():
     return "Pagina Home"
 
-
+@app.route("/contatos")
+def page_contatos():
+    return "Pagina Contatos"
 
 
 if __name__ == '__main__':
