@@ -21,6 +21,10 @@ def page_home():
 def page_contatos():
     return "Pagina Contatos"
 
+@app.route("/sobre")
+def page_sobre():
+    return "Pagina Sobre"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
