@@ -9,5 +9,9 @@ def hello():
 def get_items():
     return "item1, item2"
 
+@app.route("/dashboard")
+def page_dash():
+    return "Pagina dashboard"
+
 if __name__ == '__main__':
     app.run(debug=True)
