@@ -13,5 +13,12 @@ def get_items():
 def page_dash():
     return "Pagina dashboard"
 
+@app.route("/home")
+def page_home():
+    return "Pagina Home"
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
