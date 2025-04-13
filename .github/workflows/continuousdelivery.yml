@@ -8,7 +8,7 @@ jobs:
   delivery:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Checar código do repositório
         uses: actions/checkout@v4
 
       - name: Simulando Continuous Delivery
