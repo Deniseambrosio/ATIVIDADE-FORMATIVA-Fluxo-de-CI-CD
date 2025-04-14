@@ -1,1 +1,4 @@
-Flask==2.2.2
+flask
+Werkzeug
+uvicorn[standard]
+gunicorn
