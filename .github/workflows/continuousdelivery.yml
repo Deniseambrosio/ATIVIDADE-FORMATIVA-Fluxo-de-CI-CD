@@ -59,4 +59,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags:  ${{ secrets.DOCKER_USERNAME }}/atividadesomativa:1
+          tags:  deniseambrosio/atividadesomativa:1

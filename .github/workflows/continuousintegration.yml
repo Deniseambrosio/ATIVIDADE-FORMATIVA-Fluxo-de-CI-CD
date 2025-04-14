@@ -36,4 +36,4 @@ docker:
           context: .
           file: Dockerfile
           push: false
-          tags:  ${{ secrets.DOCKER_USERNAME }}/atividadesomativa:1
+          tags:  deniseambrosio/atividadesomativa:1
