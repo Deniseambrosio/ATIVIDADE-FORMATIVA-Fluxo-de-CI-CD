@@ -16,9 +16,7 @@ jobs:
         with:
           linter: pylint
 
-
-
-docker:
+  docker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
