@@ -16,6 +16,11 @@ jobs:
         with:
           linter: pylint
 
+      - name: Python Syntax Check
+        run: |
+          python -m py_compile src/app.py
+
+
   docker:
     runs-on: ubuntu-latest
     steps:
