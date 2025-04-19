@@ -18,9 +18,19 @@ jobs:
       
       - name: Python Syntax Check
         run: |
-          ls -la  # List files to debug
-          ls -la src/  # Check src directory contents
-          python -m py_compile src/app.py  # Correct path with debugging
+          # List directory contents to debug
+          echo "Current directory:"
+          ls -la
+          
+          # Check if src directory exists
+          echo "Checking src directory:"
+          if [ -d "src" ]; then
+            ls -la src/
+            python -m py_compile src/app.py
+          else
+            echo "ERROR: src directory not found!"
+            exit 1
+          fi
           
 
   docker:
