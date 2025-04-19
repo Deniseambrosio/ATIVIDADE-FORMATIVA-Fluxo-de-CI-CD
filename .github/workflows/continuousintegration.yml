@@ -10,6 +10,13 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+
+      - name: Python Lint Code Scanning Action
+        uses: advanced-security/python-lint-code-scanning-action@v1.1.2
+        with:
+          linter: pylint
+          paths: "src/*.py test/*.py"  # Specify paths to your Python files
+          python-version: "3.9"       
       
       - name: Python Syntax Check
         run: |
@@ -26,12 +33,6 @@ jobs:
             echo "ERROR: src directory not found!"
             exit 1
           fi
-
-
-      - name: Python Lint Code Scanning Action
-        uses: advanced-security/python-lint-code-scanning-action@v1.1.2
-        with:
-          linter: pylint
           
 
   docker:
