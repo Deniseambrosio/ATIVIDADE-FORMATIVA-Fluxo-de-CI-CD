@@ -25,4 +25,4 @@ jobs:
 
     - name: Run Flask App (Syntax Check)
       run: |
-        python -m py_compile app.py
+        python -m py_compile src/app.py
