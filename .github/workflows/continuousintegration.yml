@@ -19,6 +19,7 @@ jobs:
           python-version: "3.9"       
       
       - name: Python Syntax Check
+        working-directory: src
         run: |
           # List directory contents to debug
           echo "Current directory:"
