@@ -18,7 +18,9 @@ jobs:
       
       - name: Python Syntax Check
         run: |
-          python -m py_compile src/app.py
+          ls -la  # List files to debug
+          ls -la src/  # Check src directory contents
+          python -m py_compile src/app.py  # Correct path with debugging
           
 
   docker:
