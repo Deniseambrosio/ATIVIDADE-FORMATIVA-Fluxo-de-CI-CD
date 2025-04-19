@@ -23,6 +23,8 @@ jobs:
           # List directory contents to debug
           echo "Current directory:"
           ls -la
+          mkdir -p src
+          mv app.py src/
           
           # Check if src directory exists
           echo "Checking src directory:"
@@ -33,6 +35,12 @@ jobs:
             echo "ERROR: src directory not found!"
             exit 1
           fi
+
+      - name: Verificar estrutura do repositório
+        run: |
+          echo "Conteúdo do diretório após o checkout:"
+          ls -la
+        
           
 
   docker:
