@@ -15,31 +15,10 @@ jobs:
         uses: advanced-security/python-lint-code-scanning-action@v1.1.2
         with:
           linter: pylint
-          python-version: "3.9"       
       
       - name: Python Syntax Check
-        working-directory: src
         run: |
-          # List directory contents to debug
-          echo "Current directory:"
-          ls -la
-          mkdir -p src
-          mv app.py src/
-          
-          # Check if src directory exists
-          echo "Checking src directory:"
-          if [ -d "src" ]; then
-            ls -la src/
-            python -m py_compile src/app.py
-          else
-            echo "ERROR: src directory not found!"
-            exit 1
-          fi
-
-      - name: Verificar estrutura do repositório
-        run: |
-          echo "Conteúdo do diretório após o checkout:"
-          ls -la
+          python -m py_compile src/app.py
         
           
 
