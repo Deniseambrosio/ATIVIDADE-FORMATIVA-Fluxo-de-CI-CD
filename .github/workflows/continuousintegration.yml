@@ -58,3 +58,9 @@ jobs:
         run: |
           pip install pytest pytest-cov
           pytest test/test.py --doctest-modules --junitxml=junit/test-results.xml
+
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          files: junit/test-results.xml
